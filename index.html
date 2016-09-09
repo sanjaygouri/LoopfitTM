@@ -24,6 +24,9 @@
   <script>
 var myVar;
 
+var butclick = new Audio();
+butclick.src = 'butclick.mp3';
+
 function myFunction() {
     myVar = setTimeout(showPage, 6000);
 }
@@ -673,7 +676,7 @@ height: 40%;
 <div class="row" style="padding: 4% 0 4% 0;">
         <div class="small-12 medium-2 small-centered text-center columns design">
 
-         <a href="specs.html" class="button1 button--wayra button--border-thick button--text-upper button--size-s" style="border-color:#000;" onclick="playSound('butclick.mp3');">Our Design</a>
+       <a href="specs.html" onmousedown="butclick.play()" class="button1 button--wayra button--border-thick button--text-upper button--size-s" style="border-color:#000;">Our Design</a>
 
 
         </div>
@@ -757,7 +760,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
   <div class="row" style="padding: 4% 0 4% 0;">
         <div class="small-12 medium-2 small-centered text-center columns specs">
 
-         <button class="button1 btn2 button2--wayra button--border-thick button--text-upper button--size-s" style="border-color:#fff;color:#fff;" onclick="javascript:window.location.href='specs.html';playSound('butclick.mp3');">Our Specs</button>
+     <a  href="specs.html" onmousedown="butclick.play()"class="button1 btn2 button2--wayra button--border-thick button--text-upper button--size-s" style="border-color:#fff;color:#fff;">Our Specs</a>
 
 
         </div>
