@@ -408,6 +408,65 @@ height: 40%;
     opacity: .8;
    
   }
+  
+  
+  
+  
+.toogle div{
+  
+
+
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+  
+}
+
+
+
+
+
+.toggle .hamb:first-child
+{
+  transform-origin: 0% 0%;
+
+}
+
+.toggle .hamb:nth-last-child(2)
+{
+   transform-origin: 0% 100%;
+  
+}
+
+
+
+#sidebartoggler:checked + .page-wrap > #navbar > .toggle  .hamb:nth-last-child(1)
+{
+  
+
+ opacity: 1;
+  transform: rotate(45deg) translate(-6px, -2.8px);
+
+}
+
+#sidebartoggler:checked + .page-wrap > #navbar > .toggle  .hamb:nth-last-child(3)
+{
+   opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#sidebartoggler:checked + .page-wrap > #navbar > .toggle  .hamb:nth-last-child(2)
+{
+  
+ opacity: 1;
+  transform: rotate(-45deg) translate(-6px, 9px);
+
+}
+
+
+
+
 
 
 </style>
