@@ -1,6 +1,6 @@
  $(document).ready(function(){
       
-   	$(".youtube").colorbox({iframe:true, innerWidth:400, innerHeight:290});
+   	$(".youtube").colorbox({iframe:true, innerWidth:360, innerHeight:250});
   
  });
 
