@@ -43,6 +43,17 @@ function playSound(file)
   var aud=new Audio(file);
   aud.play();
 }
+function bicycleSound()
+{
+
+
+var aud=new Audio('bicycle.mp3');
+  aud.play();
+  
+
+
+  
+}
 </script>
 
 
@@ -393,7 +404,7 @@ height: 40%;
 
 </style>
 </head>
-<body onload="myFunction()">
+<body onload="myFunction();  setTimeout(bicycleSound);">
 
 
 <!-- Loader -->
