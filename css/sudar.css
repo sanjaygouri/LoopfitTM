@@ -1,0 +1,232 @@
+
+.parent {
+      width: 100%; 
+      height: 95%;
+     
+
+      display: inline-block;
+      overflow: hidden;
+}
+.child {
+      width: 100%;
+      height: 100%;
+         position: relative;
+          z-index: -4;
+      background-color: #000; /* fallback color */
+      background-image: url("../images/coverpic.jpg");
+      background-position: center;
+      background-size: cover;
+      transition: all 8s;
+      transition-delay: 2s;
+}
+.parent:hover .child, .parent:focus .child {
+  transform: scale(1.05);
+}
+.parent:hover span, .parent:focus span {
+  display: block;
+}
+
+
+.logotext::before{
+
+background-color:  rgba(255, 255, 255, 0.5);
+content: "LoopFit";
+position: absolute;
+display: block;
+color:  #414141;
+padding:  8px;
+
+}
+
+.logotext {
+  color: #fff; /* Good thing we set a fallback color! */
+  font-family: sans-serif;
+  font-size: 36px;
+  padding: 2.15% 25% 25% 4.5%;
+/*   top: 500%;
+  left:  500%;
+  transform: translate(-50%, -50%); */
+  position: absolute;
+}
+
+
+/* Slant Height To Top CSS */
+.slant-right {
+    width: 100%;      
+    position: relative;
+    z-index: -10;
+  }  
+
+.slant-right .slant-right-inner{
+  
+    height: 150px;
+    border-top: 150px solid transparent;
+    border-right: 1000vw solid #f7f7f7;
+    position: relative;
+    margin: auto;
+}
+
+/*about page CSS */
+
+.about_product{
+
+padding: 12% 0  4% 0;
+
+}
+
+.about_product_content{
+
+
+margin-bottom:  7%;
+
+
+}
+
+
+
+/* how it works page CSS */
+
+.how_it_works_container{
+
+  background-color: #f7f7f7;
+  margin-bottom: 0;
+
+}
+
+.how_it_works{
+
+  
+  padding: 6% 0 4% 0;
+}
+
+.video_image{
+
+ transition: all 4s;
+ transition-delay: 1s;
+
+}
+.video_image:hover{
+
+  transform: scale(1.05);
+
+
+}
+.our_design{
+
+  
+  padding: 2% 0 4% 0;
+
+}
+
+
+/* Design Button CSS */
+
+
+.button_container {
+
+  width: 200px;
+}
+
+.button_design {
+  width: 100%;
+  height: 75px;
+  position: relative;
+  overflow: hidden;
+ /*  background: #ddd; */
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  line-height: 50px;
+  
+}
+
+svg {
+  position: absolute;
+  top: 6px;
+  left: -100px;
+}
+
+.top-right,
+.bottom-right,
+.top-left,
+.bottom-left {
+  stroke-width: 2;
+  stroke: #000;
+  fill: none;
+  stroke-dasharray: 200;
+  -webkit-transition: -webkit-transform 1s ease-out;
+  transition: transform 1s ease-out;
+}
+
+.right-top,
+.right-bottom,
+.left-top,
+.left-bottom{
+  stroke-width: 2;
+  stroke: #000;
+  fill: none;
+  stroke-dasharray: 50;
+  -webkit-transition: -webkit-transform 1.5s ease-out;
+  transition: transform 1.5s ease-out;
+}
+
+.button_design:hover {
+  cursor: pointer;
+}
+
+.button_design:hover svg line.top-left,
+.button_design:hover svg line.bottom-left {
+  -webkit-transform: translateX(-100px);
+  transform: translateX(-100px);
+}
+
+.button_design:hover svg line.top-right,
+.button_design:hover svg line.bottom-right {
+  -webkit-transform: translateX(100px);
+  transform: translateX(100px);
+}
+
+.button_design:hover svg line.left-top,
+.button_design:hover svg line.right-top {
+  -webkit-transform: translateY(-50px);
+  transform: translateY(-50px);
+}
+
+.button_design:hover svg line.left-bottom,
+.button_design:hover svg line.right-bottom {
+  -webkit-transform: translateY(50px);
+  transform: translateY(50px);
+}
+
+.button_design:hover {
+  color: orange;
+  -webkit-transition: color .5s ease-in;
+}
+
+
+/* Slant Height Bottom */
+
+.slant-left {
+    width: 100%;  
+    position: relative;
+    z-index: -10;
+   
+}
+.slant-left .slant-left-inner {
+    
+    height: 150px;
+    border-top: 120px solid #191919;
+    border-left: 100vw solid #101010;
+    position: relative;
+    margin: auto;
+}
+
+
+/* Black Section Container */
+.black_section_container{
+
+
+background-color: #191919;
+  
+  padding: 16% 0 4% 0;
+
+}
