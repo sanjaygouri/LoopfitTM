@@ -24,9 +24,8 @@
 
 
 
-   <link href="themes/1/js-image-slider.css" rel="stylesheet" type="text/css" />
-    <script src="themes/1/js-image-slider.js" type="text/javascript"></script>
-    <link href="generic.css" rel="stylesheet" type="text/css" />
+   <link rel="stylesheet" href="https://unpkg.com/flickity@2.0/dist/flickity.css">
+    <script src="https://unpkg.com/flickity@2.0/dist/flickity.pkgd.js"></script>
 
   <script src="js/vendor/modernizr.js"></script>
   <script>
@@ -41,11 +40,23 @@ function myFunction() {
 
 function showPage() {
   document.getElementById("loader").style.display = "none";
-  // document.getElementById("parent1").style.display = "block";
+ document.getElementById("gallery1").style.display = "block";
   document.getElementById("at1").style.display = "block";
   document.getElementById("at2").style.display = "block";
-  document.querySelector(".jimmy").style.visibility = "visible";
-  document.querySelector(".simmy").style.visibility = "visible";
+ 
+
+
+
+var flkty = new Flickity( '.gallery', {
+  // options
+  
+  contain: true,
+  autoPlay: true,
+  wrapAround: true,
+  prevNextButtons: false,
+  pageDots: false,
+});
+
   
 }
 
@@ -698,39 +709,19 @@ margin-top: 66px !important;
 
 
 
-  <div id="sliderFrame" class="hide-for-small-only simmy " style="visibility:hidden;" >
-        <div id="slider" >
-            
-                <img class="slid" src="images/image-slider-1.jpg"  width="400 !important"  height="400 !important" alt="" />
-           
-            <img class="slid" src="images/image-slider-2.jpg"  width="400 !important"  height="400 !important"/>
-            <img class="slid" src="images/image-slider-3.jpg" alt="" width="400 !important"  height="400 !important" />
-          
-        </div>
 
 
-
-        
-    </div>
-
-
-<div class="orbit show-for-small-only jimmy" style="visibility:hidden;" id="slideFrame "   role="region"    aria-label="Favorite Space Pictures" data-orbit>
-  <ul class="orbit-container"> 
-   
-    <li class="orbit-slide">
-      <img class="orbit-image" src="images/image-slider-1.jpg" alt="Space">
-      
-    </li>
-    <li class="orbit-slide">
-      <img class="orbit-image" src="images/image-slider-2.jpg" alt="Space">
-     
-    </li>
-    <li class="orbit-slide">
-      <img class="orbit-image" src="images/image-slider-3.jpg" alt="Space">
-    
-    </li>
-  </ul>
-
+<div class="gallery" id="gallery1" style="display:none;">
+   <div class="gallery-cell">
+       <img src="images/image-slider-1.jpg" />
+   </div>
+   <div class="gallery-cell">
+      <img src="images/image-slider-2.jpg" />
+  </div>
+  <div class="gallery-cell">
+  <img src="images/image-slider-3.jpg" />
+  </div>
+  
 </div>
 
 
