@@ -19,6 +19,9 @@
   <link rel="stylesheet" type="text/css" href="colorbox.css">
   <!-- If you are using the gem version, you need this only -->
   <link rel="stylesheet" href="css/app.css">
+   <link href="themes/1/js-image-slider.css" rel="stylesheet" type="text/css" />
+    <script src="themes/1/js-image-slider.js" type="text/javascript"></script>
+    <link href="generic.css" rel="stylesheet" type="text/css" />
 
   
   <script>
@@ -33,7 +36,7 @@ function myFunction() {
 
 function showPage() {
   document.getElementById("loader").style.display = "none";
-  document.getElementById("parent1").style.display = "block";
+  //document.getElementById("parent1").style.display = "block";
   document.getElementById("at1").style.display = "block";
   document.getElementById("at2").style.display = "block";
 }
@@ -66,6 +69,33 @@ var aud=new Audio('bicycle.mp3');
 
 <style type="text/css">
 
+
+/*  Start Slider Custom CSS */
+
+
+
+.navBulletsWrapper{
+
+
+display: none;
+
+}
+@media (min-width: 320px)  and (max-width: 480px)  {
+
+.slid{
+width:400px;
+height:300px
+}
+
+
+#slider, #slider .sliderInner {
+width:100%;
+height:600px  
+}
+
+}
+
+/*  End Slider Custom CSS */
 
 
 html,body{
@@ -610,18 +640,40 @@ height: 40%;
 </article>
 
 <!--  Cover Picture -->
-<div class="parent" id="parent1" style="display:none;">
-  <div class="child">
+<!--<div class="parent" id="parent1" style="display:none;">-->
+<!--  <div class="child">-->
     
  
  
 
 
-  </div>
-</div>
+<!--  </div>-->
+<!--</div>-->
 
 
+    <div id="sliderFrame" class="show-for-medium-up">
+        <div id="slider">
+            
+                <img class="slid" src="images/image-slider-1.jpg" alt="" />
+           
+            <img class="slid" src="images/image-slider-2.jpg" />
+            <img class="slid" src="images/image-slider-3.jpg" alt="" />
+          
+        </div>
+       
+    </div>
 
+
+    <div id="sliderFrame" class="show-for-small-only">
+        <div id="slider">
+            
+            <img class="slid" src="images/image-slider-4.jpg" alt="" />           
+            <img class="slid" src="images/image-slider-5.jpg" />
+            <img class="slid" src="images/image-slider-4.jpg" alt="" />
+          
+        </div>
+       
+    </div>
 
  
 
