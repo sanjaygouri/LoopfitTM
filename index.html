@@ -36,9 +36,12 @@ function myFunction() {
 
 function showPage() {
   document.getElementById("loader").style.display = "none";
-  document.getElementById("sliderFrame").style.display = "block";
+
   document.getElementById("at1").style.display = "block";
   document.getElementById("at2").style.display = "block";
+  document.querySelector(".jimmy").style.visibility = "visible";
+  document.querySelector(".simmy").style.visibility = "visible";
+  
 }
 
 
@@ -664,7 +667,7 @@ height: 40%;
 <!--</div>-->
 
 
-    <div id="sliderFrame" class="hide-for-small-only" >
+  <div id="sliderFrame " class="hide-for-small-only simmy " style="visibility:hidden;" >
         <div id="slider" >
             
                 <img class="slid" src="images/image-slider-1.jpg"  width="400 !important"  height="400 !important" alt="" />
@@ -678,6 +681,26 @@ height: 40%;
 
         
     </div>
+
+
+<div class="orbit show-for-small-only jimmy" style="visibility:hidden;" id="slideFrame "   role="region"    aria-label="Favorite Space Pictures" data-orbit>
+  <ul class="orbit-container"> 
+   
+    <li class="orbit-slide">
+      <img class="orbit-image" src="images/image-slider-1.jpg" alt="Space">
+      
+    </li>
+    <li class="orbit-slide">
+      <img class="orbit-image" src="images/image-slider-2.jpg" alt="Space">
+     
+    </li>
+    <li class="orbit-slide">
+      <img class="orbit-image" src="images/image-slider-3.jpg" alt="Space">
+    
+    </li>
+  </ul>
+
+</div>
 
    
 
