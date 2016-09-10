@@ -36,7 +36,7 @@ function myFunction() {
 
 function showPage() {
   document.getElementById("loader").style.display = "none";
-  //document.getElementById("parent1").style.display = "block";
+  document.getElementById("sliderFrame").style.display = "block";
   document.getElementById("at1").style.display = "block";
   document.getElementById("at2").style.display = "block";
 }
@@ -651,7 +651,7 @@ height: 40%;
 <!--</div>-->
 
 
-    <div id="sliderFrame" class="show-for-medium-up">
+    <div id="sliderFrame" class="show-for-medium-up" style="display:none;">
         <div id="slider">
             
                 <img class="slid" src="images/image-slider-1.jpg" alt="" />
@@ -664,7 +664,7 @@ height: 40%;
     </div>
 
 
-    <div id="sliderFrame" class="show-for-small-only">
+    <div id="sliderFrame" class="show-for-small-only" style="display:none;>
         <div id="slider">
             
             <img class="slid" src="images/image-slider-4.jpg" alt="" />           
