@@ -11,7 +11,7 @@
   <!-- If you are using the CSS version, only link these 2 files, you may add app.css to use for your overrides if you like -->
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Cambo|Poppins:400,600" rel="stylesheet" type="text/css">
-  
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" type="text/css" href="css/buttons.css" />
   <link rel="stylesheet" href="css/foundation.css">
   <link rel="stylesheet" href="css/sudar.css">
@@ -19,13 +19,18 @@
   <link rel="stylesheet" type="text/css" href="colorbox.css">
   <!-- If you are using the gem version, you need this only -->
   <link rel="stylesheet" href="css/app.css">
+
+
+
+
+
    <link href="themes/1/js-image-slider.css" rel="stylesheet" type="text/css" />
     <script src="themes/1/js-image-slider.js" type="text/javascript"></script>
     <link href="generic.css" rel="stylesheet" type="text/css" />
 
-  
+  <script src="js/vendor/modernizr.js"></script>
   <script>
-var myVar;
+var myVar, sVar;
 
 var butclick = new Audio();
 butclick.src = 'butclick.mp3';
@@ -36,7 +41,7 @@ function myFunction() {
 
 function showPage() {
   document.getElementById("loader").style.display = "none";
-
+  // document.getElementById("parent1").style.display = "block";
   document.getElementById("at1").style.display = "block";
   document.getElementById("at2").style.display = "block";
   document.querySelector(".jimmy").style.visibility = "visible";
@@ -45,6 +50,15 @@ function showPage() {
 }
 
 
+function bicycleSound()
+{
+
+
+var aud=new Audio('bicycle.mp3');
+aud.play();
+  
+}
+
 
 
 function playSound(file)
@@ -52,17 +66,10 @@ function playSound(file)
   var aud=new Audio(file);
   aud.play();
 }
-function bicycleSound()
-{
 
 
-var aud=new Audio('bicycle.mp3');
-  aud.play();
-  
 
 
-  
-}
 </script>
 
 
@@ -72,33 +79,6 @@ var aud=new Audio('bicycle.mp3');
 
 <style type="text/css">
 
-
-/*  Start Slider Custom CSS */
-
-
-
-.navBulletsWrapper{
-
-
-display: none;
-
-}
-@media (min-width: 320px)  and (max-width: 480px)  {
-
-.slid{
-width:400px;
-height:300px
-}
-
-
-#slider, #slider .sliderInner {
-width:100%;
-height:600px  
-}
-
-}
-
-/*  End Slider Custom CSS */
 
 
 html,body{
@@ -132,25 +112,14 @@ body
 
 
 /* Loader CSS */
-/*
+
 .wrap {
   background-image: url('http://15.metronome3.com/assets/dots.png');
   background-repeat: repeat-y;
   position: relative;
   height: inherit;
 }
-    */  
-@media (min-width: 480px)  {
-
-
-.hall{
-
-
-  display:  none !important;
-}
-
-
-  }
+      
 
 .fabicycle{
   margin: 25px 0 0 0;
@@ -239,27 +208,17 @@ padding-top: 26.5%;
 @media (min-width: 320px)  and (max-width: 480px)  {
       .loopfitlogo{
 
-       top:  25%;
-       margin-left: 15%;
-      }
-      .b2c{
-       margin-top:45% !important; 
-       height: 20%;
+       top:  30%;
       }
       .fit{
         transform: scale(1.4);
       }
-    .mobsize {
+      
 
-font-size: 16px !important;
-}  
-.hall{
-	margin-top:66px !important;
-}
 }
 
 .b2c{
-margin-top: 5%;
+
 width:  100%;
 height: 40%;
 
@@ -418,7 +377,7 @@ height: 40%;
   -webkit-transition: all 0.15s ease-out 0;
   -moz-transition: all 0.15s ease-out 0;
   transition: all 0.15s ease-out 0;
-  width: 150px;
+  width: 160px;
   padding: 30px;
   background: #333333;
   z-index: 10; 
@@ -457,7 +416,28 @@ height: 40%;
     opacity: .8;
    
   }
- 
+
+
+
+
+
+
+
+.toogle div{
+  
+
+
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+  
+}
+
+
+
+
+
 .toggle .hamb:first-child
 {
   transform-origin: 0% 0%;
@@ -500,11 +480,54 @@ height: 40%;
 
 
 
+
+
+.navBulletsWrapper{
+
+
+display: none;
+
+}
+@media (min-width: 320px)  and (max-width: 480px)  {
+
+
+
+#slider, #slider .sliderInner {
+width:100%;
+height:300px  
+}
+
+
+.hall{
+
+margin-top: 66px !important;
+ 
+}
+
+
+
+}
+/* 
+@media (min-width: 480px)  {
+
+
+.hall{
+
+
+  display:  none !important;
+}
+
+
+  } */
+
+
+
+
 </style>
 </head>
-<body onload="myFunction();  setTimeout(bicycleSound);">
+<body onload="myFunction();  setTimeout(bicycleSound, 1500);">
 
-
+<!-- bicycleSound('bicycle.mp3'); -->
 <!-- Loader -->
 
 
@@ -607,11 +630,13 @@ height: 40%;
 
  <img src="images/LoopFit_logo.png" width="180px" height="90px" alt="LoopFit" style="position:fixed;top:0; z-index:2;">
 
- <input type="checkbox" id="sidebartoggler" name="" value="">
 
-<div class="page-wrap">
-  <nav id="navbar">
-  <label for="sidebartoggler"  class="toggle" onclick="playSound('butclick.mp3');">
+<input type="checkbox" id="sidebartoggler" name="" value="">
+<div class="page-wrap" >
+
+  <nav id="navbar" >
+
+  <label for="sidebartoggler" class="toggle" onclick="playSound('butclick.mp3');">
   <div class="hamb"></div>
   <div class="hamb" style=""></div>
   <div class="hamb"></div>
@@ -622,31 +647,11 @@ height: 40%;
   
   
   <div class="sidebar" >
-    <ul>
-      <li onclick="playSound('butclick.mp3');">
-<a href="#parent1" style="color:#fff;">
-      <i class="fa fa-home"   aria-hidden="true"></i><span style="margin-left:10%;"> Home</span> 
-</a>
-      </li>
-      <li onclick="playSound('butclick.mp3');">
-<a href="#about" style="color:#fff;">
-      <i class="fa fa-bicycle" aria-hidden="true"></i><span style="margin-left:15%;">About</span>
-</a>
-      </li>
-      <li onclick="playSound('butclick.mp3');">
-<a href="#working" style="color:#fff;">  
-      <i class="fa fa-binoculars" aria-hidden="true">
-      
-      </i><span style="margin-left:10%;">Working</span>
-</a>
-      </li>
-      <li onclick="playSound('butclick.mp3');">
- <a href="#features" style="color:#fff;">
-      <i class="fa fa-cubes" aria-hidden="true">
-       
-      </i><span style="margin-left:5%;">Features</span>
-      </a>
-      </li>
+   <ul>
+      <li onclick="playSound('butclick.mp3');"> <i class="fa fa-home" aria-hidden="true" style="margin-right:6px;"></i> Home</li>
+      <li onclick="playSound('butclick.mp3');"><i class="fa fa-bicycle" aria-hidden="true" style="margin-right:6px;"></i> About</li>
+      <li onclick="playSound('butclick.mp3');"><i class="fa fa-binoculars" aria-hidden="true" style="margin-right:8px;"></i> Working </li>
+      <li onclick="playSound('butclick.mp3');"><i class="fa fa-cubes" aria-hidden="true" style="margin-right:6px;"></i> Features</li>
         
     </ul>
   </div>
@@ -656,15 +661,18 @@ height: 40%;
 </article>
 
 <!--  Cover Picture -->
-<!--<div class="parent" id="parent1" style="display:none;">-->
-<!--  <div class="child">-->
+<!-- <div class="parent" id="parent1" style="display:none;">
+  <div class="child">
     
  
  
 
 
-<!--  </div>-->
-<!--</div>-->
+  </div>
+</div>
+ -->
+
+
 
 
   <div id="sliderFrame " class="hide-for-small-only simmy " style="visibility:hidden;" >
@@ -702,26 +710,35 @@ height: 40%;
 
 </div>
 
-   
 
-<div class="orbit hall"  id="slideFrame" role="region"   aria-label="Favorite Space Pictures" data-orbit>
-  <ul class="orbit-container">
-   
-    <li class="orbit-slide">
-      <img class="orbit-image" src="images/image-slider-1.jpg" alt="Space">
-   
-    </li>
-    <li class="orbit-slide">
-      <img class="orbit-image" src="images/image-slider-2.jpg" alt="Space">
-   
-    </li>
-    <li class="orbit-slide">
-      <img class="orbit-image" src="images/image-slider-3.jpg" alt="Space">
-  
-    </li>
-  </ul>
- 
-</div>
+
+
+
+
+        <!-- <div id="slider" class="show-for-medium hello">
+            
+                <img class="slid" src="images/image-slider-1.jpg" alt="" />
+           
+            <img class="slid" src="images/image-slider-2.jpg" />
+            <img class="slid" src="images/image-slider-3.jpg" alt="" />
+          
+        </div> -->
+
+
+<!-- 
+  <div id="sliderFrame"  class="show-for-small-only">
+
+         <div id="slider">
+            
+            <img class="slid"  src="images/image-slider-4.jpg" alt="" />           
+            <img class="slid"  src="images/image-slider-5.jpg" />
+            <img class="slid" src="images/image-slider-4.jpg" alt="" />
+          
+        </div>
+       
+    </div> -->
+
+
 
 
  
@@ -744,24 +761,22 @@ height: 40%;
 
 <div style="position:relative;">
 
-
-
          
     
 
 
-    <div class="row about_product" id="about">
+    <div class="row about_product">
 
-        <div class="small-12 small-centered text-center columns about"><i class="fa fa-bicycle fa-3x " aria-hidden="true" style="color:black;"></i><h3 style="margin-top:20px;">LOOPFIT IS THE FUTURE OF INDOOR TRAINING.</h3></div>
-
+        <div class="small-12 small-centered text-center columns about"><i class="fa fa-bicycle fa-4x" aria-hidden="true"></i><h3 style="margin-top:20px;">About Product</h3></div>
     </div>
 
 
     <div class="row about_product_content">
-          <div class="large-12 medium-6 columns  text-center mobsize  about-col-1" style=" font-size:20px;text-align:justify;text-align:left;"> 
-LoopFit’s balanced combination of hardware and software makes professional metrics accessible and easy to understand. LoopFit will fetch highly accurate data from your ride and turn your movements into tools for improvement using the inbuilt predictive and prescriptive algorithms.
-</div>
+          <div class="small-12 medium-6 columns about-col-1" style="text-align: justify; text-indent: 4%;"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+  
+          <div class="small-12  medium-5 columns about-col-2" style="text-align: justify;"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
     </div>
+
 
    
 </div>
@@ -775,7 +790,7 @@ LoopFit’s balanced combination of hardware and software makes professional met
 <!-- how it works -->
 
 
-<div class="how_it_works_container" id="working">
+<div class="how_it_works_container">
     <div class="row how_it_works">
 
 
@@ -820,7 +835,7 @@ LoopFit’s balanced combination of hardware and software makes professional met
 <div class="row" style="padding: 4% 0 4% 0;">
         <div class="small-12 medium-2 small-centered text-center columns design">
 
-       <a href="specs.html" onmousedown="butclick.play()" class="button1 button--wayra button--border-thick button--text-upper button--size-s" style="border-color:#000;">Our Design</a>
+         <a href="specs.html" onmousedown="butclick.play()" class="button1 button--wayra button--border-thick button--text-upper button--size-s" style="border-color:#000;">Our Design</a>
 
 
         </div>
@@ -831,11 +846,11 @@ LoopFit’s balanced combination of hardware and software makes professional met
 </div>
 <!-- Black Section -->
 
-<div class="black_section_container" id="just">
+<div class="black_section_container">
 
 <div class="row">
 
-<div class="small-12 black-col-1 medium-4 columns bc"  style="color:#ffffff; text-align: justify;">
+<div class="small-12 black-col-1 medium-4 columns bc" style="color:#ffffff; text-align: justify;">
   
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 
@@ -868,7 +883,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 <!-- features -->
 
 
-<section style="background-color:#101010; padding: 4% 0 4% 0;" id="features">
+<section style="background-color:#101010; padding: 4% 0 4% 0;">
 
 <div class="row columns text-center align-center">
 <i class="fa fa-cubes fa-2x" aria-hidden="true" style="color:#fff"></i>
@@ -902,9 +917,9 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 		</div>
 	</div> -->
   <div class="row" style="padding: 4% 0 4% 0;">
-        <div class="small-12 medium-2 small-centered text-center columns specs">
+        <div class="small-12 medium-2 small-centered text-center columns specs" >
 
-     <a  href="specs.html" onmousedown="butclick.play()"class="button1 btn2 button2--wayra button--border-thick button--text-upper button--size-s" style="border-color:#fff;color:#fff;">Our Specs</a>
+         <a  href="specs.html" onmousedown="butclick.play()"class="button1 btn2 button2--wayra button--border-thick button--text-upper button--size-s" style="border-color:#fff;color:#fff;">Our Specs</a>
 
 
         </div>
@@ -984,17 +999,19 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
     hiw=e(".hiw"),
     hiw1=e(".hiw-col-1"),
     hiw2=e(".hiw-col-2"),
-    bc  = e(".bc"),
+     bc=e(".bc"),
+
 
 s=new TimelineLite;
 
-s.from(ab, .8,{y:-30,autoAlpha:0,ease:Power1.easeOut})
+s.from(ab, 8,{y:-30,autoAlpha:0,ease:Power1.easeOut})
 .from(ab1, .5,{y:-30,autoAlpha:0,ease:Power1.easeOut})
 .from(ab2,.5,{y:-30,autoAlpha:0,ease:Power1.easeOut})
 .from(hiw,.5,{y:-30,autoAlpha:0,ease:Power1.easeOut})
 .from(hiw1,.5,{y:-30,autoAlpha:0,ease:Power1.easeOut})
 .from(hiw2,.5,{y:-30,autoAlpha:0,ease:Power1.easeOut})
 .from(bc,.5,{y:-30,autoAlpha:0,ease:Power1.easeOut})
+
 }
 
 
@@ -1008,28 +1025,11 @@ s.from(ab, .8,{y:-30,autoAlpha:0,ease:Power1.easeOut})
 
     <script>
 var tl = new TimelineLite();
-tl.fromTo(".b2c", 4, {x:"0%"},{x:"68%"}, delay=1.5);
+tl.fromTo(".b2c", 3, {x:"0%"},{x:"68%",}, delay=3);
 
 </script>
 
-<script>
-  $(document).ready(function(){
-  $('a[href*=#]').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
-    && location.hostname == this.hostname) {
-      var $target = $(this.hash);
-      $target = $target.length && $target
-      || $('[name=' + this.hash.slice(1) +']');
-      if ($target.length) {
-        var targetOffset = $target.offset().top;
-        $('html,body')
-        .animate({scrollTop: targetOffset}, 5000);
-       return false;
-      }
-    }
-  });
-});
-</script>
+
 
 
 
