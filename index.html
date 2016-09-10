@@ -20,12 +20,14 @@
   <!-- If you are using the gem version, you need this only -->
   <link rel="stylesheet" href="css/app.css">
 
-
-
-
-
-   <link rel="stylesheet" href="https://unpkg.com/flickity@2.0/dist/flickity.css">
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2.0/dist/flickity.css">
     <script src="https://unpkg.com/flickity@2.0/dist/flickity.pkgd.js"></script>
+
+
+
+   <link href="themes/1/js-image-slider.css" rel="stylesheet" type="text/css" />
+    <script src="themes/1/js-image-slider.js" type="text/javascript"></script>
+    <link href="generic.css" rel="stylesheet" type="text/css" />
 
   <script src="js/vendor/modernizr.js"></script>
   <script>
@@ -217,14 +219,9 @@ padding-top: 26.5%;
 }
 
 @media (min-width: 320px)  and (max-width: 480px)  {
-    .loopfitlogo{
+      .loopfitlogo{
 
-       top:  25%;
-       margin-left: 15%;
-      }
-      .b2c{
-       margin-top:45% !important; 
-       height: 20%;
+       top:  30%;
       }
       .fit{
         transform: scale(1.4);
@@ -538,8 +535,21 @@ margin-top: 66px !important;
 
 
 
+.gallery {
+   padding: 50px 0px 0px 0px;
+}
+
+.gallery-cell {
+    width: 100%;
+}
+
+.gallery img {
+  width: 100%;
+}
+
 
 </style>
+
 </head>
 <body onload="myFunction();  setTimeout(bicycleSound, 1500);">
 
@@ -646,11 +656,13 @@ margin-top: 66px !important;
 
  <img src="images/LoopFit_logo.png" width="180px" height="90px" alt="LoopFit" style="position:fixed;top:0; z-index:2;">
 
- <input type="checkbox" id="sidebartoggler" name="" value="">
 
-<div class="page-wrap">
-  <nav id="navbar">
-  <label for="sidebartoggler"  class="toggle" onclick="playSound('butclick.mp3');">
+<input type="checkbox" id="sidebartoggler" name="" value="">
+<div class="page-wrap" >
+
+  <nav id="navbar" >
+
+  <label for="sidebartoggler" class="toggle" onclick="playSound('butclick.mp3');">
   <div class="hamb"></div>
   <div class="hamb" style=""></div>
   <div class="hamb"></div>
@@ -660,32 +672,12 @@ margin-top: 66px !important;
   
   
   
-  <div class="sidebar" id="sidebar">
-    <ul>
-      <li onclick="playSound('butclick.mp3');">
-<a href="#sidebar" style="color:#fff;">
-      <i class="fa fa-home"   aria-hidden="true"></i><span style="margin-left:10%;"> Home</span> 
-</a>
-      </li>
-      <li onclick="playSound('butclick.mp3');">
-<a href="#about" style="color:#fff;">
-      <i class="fa fa-bicycle" aria-hidden="true"></i><span style="margin-left:15%;">About</span>
-</a>
-      </li>
-      <li onclick="playSound('butclick.mp3');">
-<a href="#working" style="color:#fff;">  
-      <i class="fa fa-binoculars" aria-hidden="true">
-      
-      </i><span style="margin-left:10%;">Working</span>
-</a>
-      </li>
-      <li onclick="playSound('butclick.mp3');">
- <a href="#features" style="color:#fff;">
-      <i class="fa fa-cubes" aria-hidden="true">
-       
-      </i><span style="margin-left:5%;">Features</span>
-      </a>
-      </li>
+  <div class="sidebar" >
+   <ul>
+      <li onclick="playSound('butclick.mp3');"> <i class="fa fa-home" aria-hidden="true" style="margin-right:6px;"></i> Home</li>
+      <li onclick="playSound('butclick.mp3');"><i class="fa fa-bicycle" aria-hidden="true" style="margin-right:6px;"></i> About</li>
+      <li onclick="playSound('butclick.mp3');"><i class="fa fa-binoculars" aria-hidden="true" style="margin-right:8px;"></i> Working </li>
+      <li onclick="playSound('butclick.mp3');"><i class="fa fa-cubes" aria-hidden="true" style="margin-right:6px;"></i> Features</li>
         
     </ul>
   </div>
@@ -694,21 +686,6 @@ margin-top: 66px !important;
 
 </article>
 
-<!--  Cover Picture -->
-<!-- <div class="parent" id="parent1" style="display:none;">
-  <div class="child">
-    
- 
- 
-
-
-  </div>
-</div>
- -->
-
-
-
-
 
 
 <div class="gallery" id="gallery1" style="display:none;">
@@ -716,41 +693,15 @@ margin-top: 66px !important;
        <img src="images/image-slider-1.jpg" />
    </div>
    <div class="gallery-cell">
-      <img src="images/image-slider-2.jpg" />
+      <img src="images/i1.png" />
   </div>
   <div class="gallery-cell">
-  <img src="images/image-slider-3.jpg" />
+  <img src="images/i2.png" />
   </div>
   
 </div>
 
 
-
-
-
-
-        <!-- <div id="slider" class="show-for-medium hello">
-            
-                <img class="slid" src="images/image-slider-1.jpg" alt="" />
-           
-            <img class="slid" src="images/image-slider-2.jpg" />
-            <img class="slid" src="images/image-slider-3.jpg" alt="" />
-          
-        </div> -->
-
-
-<!-- 
-  <div id="sliderFrame"  class="show-for-small-only">
-
-         <div id="slider">
-            
-            <img class="slid"  src="images/image-slider-4.jpg" alt="" />           
-            <img class="slid"  src="images/image-slider-5.jpg" />
-            <img class="slid" src="images/image-slider-4.jpg" alt="" />
-          
-        </div>
-       
-    </div> -->
 
 
 
@@ -775,24 +726,25 @@ margin-top: 66px !important;
 
 <div style="position:relative;">
 
+
+
          
     
 
 
     <div class="row about_product" id="about">
 
-        <div class="small-12 small-centered text-center columns about"><i class="fa fa-bicycle fa-3x " aria-hidden="true" style="color:black;"></i><h3 style="margin-top:20px;">LOOPFIT IS THE FUTURE OF INDOOR TRAINING.</h3></div>
+        <div class="small-12 small-centered text-center columns about"><i class="fa fa-bicycle fa-3x " aria-hidden="true" style="color:black;"></i><h3 style="margin-top:20px;">LoopFit<sup style="vertical-align: top !important; position: relative;
+  top: 0.8em; font-size: 10px !important;  ">TM</sup> IS THE FUTURE OF INDOOR TRAINING.</h3></div>
 
     </div>
 
 
     <div class="row about_product_content">
-          <div class="large-12 medium-6 columns  text-center mobsize  about-col-1" style=" font-size:18px;text-align:justify;text-align:left;"> 
+          <div class="large-12 medium-6 columns  text-center mobsize  about-col-1" style=" font-size:18px;text-align:left;"> 
 LoopFit’s balanced combination of hardware and software makes professional metrics accessible and easy to understand. LoopFit will fetch highly accurate data from your ride and turn your movements into tools for improvement using the inbuilt predictive and prescriptive algorithms.
 </div>
     </div>
-
-
 
    
 </div>
@@ -806,7 +758,7 @@ LoopFit’s balanced combination of hardware and software makes professional met
 <!-- how it works -->
 
 
-<div class="how_it_works_container" id="working">
+<div class="how_it_works_container">
     <div class="row how_it_works">
 
 
@@ -815,35 +767,44 @@ LoopFit’s balanced combination of hardware and software makes professional met
 
     </div>
 
-  <!--   <div class="row ">     
-  
-          <div class="small-12 medium-6 columns hiw-col-1" style="text-align: justify;"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
 
-          <div class="small-12 medium-5 columns hiw-col-2" >
-            <p><a class='youtube' href="https://www.youtube.com/embed/8A6gEr1NaAk" style="position:relative;display: inline-block;overflow:hidden !important;">
-
-            <img src="images/coverpic.jpg" alt="watch the video" class="video_image" style="z-index:-10;" >
-            <i class="fa fa-play fa-2x" aria-hidden="true" 
-            style="color:rgba(255,255,255,0.6); z-index:2;position:absolute; top:44%;left:46%;"></i>
-            </a></p>
-          </div>
- 
-    </div> -->
 
 
 
     <div class="row">     
   
-          <div class="small-12 medium-6 columns hiw-col-1" style="text-align: justify;"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+          <div class="small-12 medium-6 columns hiw-col-1" style="text-align: justify;"> 
 
-          <div class="small-12 medium-5 columns hiw-col-2">
+
+LoopFit brings to your indoors a perfect blend of immersive VR, IoT and analytics in a multi-player gaming environment, making your workouts more exciting and enjoyable. <br/><br/>
+
+While you’re at the game, it also tracks your heart rate, calories burnt, pedaling speed, power and keeps a tab on your health and fitness. Its’ hardware and virtual environment provide you the best of both – digital and real worlds. <br/><br/>
+
+The faster you cycle in the real world, the faster you propel in the virtual world. You could lean your body to the left or right to steer and navigate without any motion sickness.
+
+
+
+
+
+
+          </div>
+
+             <div class="small-12 medium-5 columns hiw-col-2">
+            <img src="images/paralax-index1-min.jpg">
+          </div>
+
+
+
+
+
+         <!--  <div class="small-12 medium-5 columns hiw-col-2">
             <p><a class='youtube' href="https://www.youtube.com/embed/8A6gEr1NaAk" style="position:relative;display: inline-block;overflow:hidden !important;">
 
             <img src="images/coverpic.jpg" alt="watch the video" class="video_image" style="z-index:-10;">
             <i class="fa fa-play fa-2x" aria-hidden="true" 
             style="color:rgba(255,255,255,0.6); z-index:2;position:absolute; top:44%;left:46%;"></i>
             </a></p>
-          </div>
+          </div> -->
  
     </div>
 
@@ -899,7 +860,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 <!-- features -->
 
 
-<section style="background-color:#101010; padding: 4% 0 4% 0;" id="features">
+<section style="background-color:#101010; padding: 4% 0 4% 0;">
 
 <div class="row columns text-center align-center">
 <i class="fa fa-cubes fa-2x" aria-hidden="true" style="color:#fff"></i>
