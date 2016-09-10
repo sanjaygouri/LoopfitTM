@@ -635,13 +635,11 @@ margin-top: 66px !important;
 
  <img src="images/LoopFit_logo.png" width="180px" height="90px" alt="LoopFit" style="position:fixed;top:0; z-index:2;">
 
+ <input type="checkbox" id="sidebartoggler" name="" value="">
 
-<input type="checkbox" id="sidebartoggler" name="" value="">
-<div class="page-wrap" >
-
-  <nav id="navbar" >
-
-  <label for="sidebartoggler" class="toggle" onclick="playSound('butclick.mp3');">
+<div class="page-wrap">
+  <nav id="navbar">
+  <label for="sidebartoggler"  class="toggle" onclick="playSound('butclick.mp3');">
   <div class="hamb"></div>
   <div class="hamb" style=""></div>
   <div class="hamb"></div>
@@ -652,11 +650,31 @@ margin-top: 66px !important;
   
   
   <div class="sidebar" >
-   <ul>
-      <li onclick="playSound('butclick.mp3');"> <i class="fa fa-home" aria-hidden="true" style="margin-right:6px;"></i> Home</li>
-      <li onclick="playSound('butclick.mp3');"><i class="fa fa-bicycle" aria-hidden="true" style="margin-right:6px;"></i> About</li>
-      <li onclick="playSound('butclick.mp3');"><i class="fa fa-binoculars" aria-hidden="true" style="margin-right:8px;"></i> Working </li>
-      <li onclick="playSound('butclick.mp3');"><i class="fa fa-cubes" aria-hidden="true" style="margin-right:6px;"></i> Features</li>
+    <ul>
+      <li onclick="playSound('butclick.mp3');">
+<a href="#parent1" style="color:#fff;">
+      <i class="fa fa-home"   aria-hidden="true"></i><span style="margin-left:10%;"> Home</span> 
+</a>
+      </li>
+      <li onclick="playSound('butclick.mp3');">
+<a href="#about" style="color:#fff;">
+      <i class="fa fa-bicycle" aria-hidden="true"></i><span style="margin-left:15%;">About</span>
+</a>
+      </li>
+      <li onclick="playSound('butclick.mp3');">
+<a href="#working" style="color:#fff;">  
+      <i class="fa fa-binoculars" aria-hidden="true">
+      
+      </i><span style="margin-left:10%;">Working</span>
+</a>
+      </li>
+      <li onclick="playSound('butclick.mp3');">
+ <a href="#features" style="color:#fff;">
+      <i class="fa fa-cubes" aria-hidden="true">
+       
+      </i><span style="margin-left:5%;">Features</span>
+      </a>
+      </li>
         
     </ul>
   </div>
