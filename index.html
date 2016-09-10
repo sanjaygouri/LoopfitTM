@@ -137,6 +137,17 @@ body
   height: inherit;
 }
     */  
+@media (min-width: 480px)  {
+
+
+.hall{
+
+
+  display:  none !important;
+}
+
+
+  }
 
 .fabicycle{
   margin: 25px 0 0 0;
@@ -239,6 +250,11 @@ padding-top: 26.5%;
 
 font-size: 16px !important;
 }  
+.hall{
+
+
+ margin-top:66px !important;
+}
 
 }
 
@@ -651,29 +667,43 @@ height: 40%;
 <!--</div>-->
 
 
-    <div id="sliderFrame" class="show-for-medium-up" style="display:none;">
-        <div id="slider">
+   <div id="sliderFrame" class="hide-for-small-only" >
+        <div id="slider" >
             
-                <img class="slid" src="images/image-slider-1.jpg" alt="" />
+                <img class="slid" src="images/image-slider-1.jpg"  width="400 !important"  height="400 !important" alt="" />
            
-            <img class="slid" src="images/image-slider-2.jpg" />
-            <img class="slid" src="images/image-slider-3.jpg" alt="" />
+            <img class="slid" src="images/image-slider-2.jpg"  width="400 !important"  height="400 !important"/>
+            <img class="slid" src="images/image-slider-3.jpg" alt="" width="400 !important"  height="400 !important" />
           
         </div>
-       
-    </div>
 
 
-    <div id="sliderFrame" class="show-for-small-only" style="display:none;>
-        <div id="slider">
-            
-            <img class="slid" src="images/image-slider-4.jpg" alt="" />           
-            <img class="slid" src="images/image-slider-5.jpg" />
-            <img class="slid" src="images/image-slider-4.jpg" alt="" />
-          
-        </div>
-       
+
+        
     </div>
+
+   
+
+<div class="orbit hall"  id="slideFrame" role="region"   aria-label="Favorite Space Pictures" data-orbit>
+  <ul class="orbit-container">
+   
+    <li class="orbit-slide">
+      <img class="orbit-image" src="images/image-slider-1.jpg" alt="Space">
+   
+    </li>
+    <li class="orbit-slide">
+      <img class="orbit-image" src="images/image-slider-2.jpg" alt="Space">
+   
+    </li>
+    <li class="orbit-slide">
+      <img class="orbit-image" src="images/image-slider-3.jpg" alt="Space">
+  
+    </li>
+  </ul>
+ 
+</div>
+
+
 
  
 
