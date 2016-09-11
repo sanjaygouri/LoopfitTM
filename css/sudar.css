@@ -55,6 +55,7 @@ padding:  8px;
     width: 100%;      
     position: relative;
     z-index: -10;
+    margin-top: -4%;
   }  
 
 .slant-right .slant-right-inner{
@@ -75,9 +76,9 @@ padding: 12% 0  4% 0;
 }
 
 .about_product_content{
+padding: 2% 0  12% 0;
 
-
-margin-bottom:  7%;
+/* margin-bottom:  7%; */
 
 
 }
